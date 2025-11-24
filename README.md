@@ -1,4 +1,3 @@
-Option 1: For GitHub README (Detailed & Structural)
 
 This version clearly separates the features by user roles, which is excellent for showing your understanding of system design.
 
