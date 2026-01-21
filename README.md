@@ -1,109 +1,58 @@
-## Project Structure
-
-```text
 com.example.restaurant
 │
-├── core
-│   ├── base
-│   │   ├── BaseActivity.java
-│   │   └── BaseFragment.java
+├── core/                           # CÁC THÀNH PHẦN DÙNG CHUNG (Core Layer)
+│   ├── base/                       # Các lớp cơ sở (Base Classes)
+│   │   ├── BaseActivity.java       # Activity cha (xử lý toolbar, loading, show toast chung)
+│   │   └── BaseFragment.java       # Fragment cha (xử lý binding, context chung)
 │   │
-│   ├── session
-│   │   └── SessionManager.java       // lưu user, role, login state
+│   ├── session/                    # Quản lý phiên làm việc
+│   │   └── SessionManager.java     # Lưu trạng thái đăng nhập (SharedPreferences), check quyền (Role)
 │   │
-│   └── utils
-│       ├── Constants.java
-│       ├── DateUtils.java
-│       ├── PriceUtils.java
-│       ├── RoleUtils.java
-│       └── ValidationUtils.java
+│   └── utils/                      # Các tiện ích hỗ trợ (Utilities)
+│       ├── Constants.java          # Chứa hằng số (DATABASE_NAME, API_KEY, Intent Keys)
+│       ├── DateUtils.java          # Format ngày tháng (dd/MM/yyyy)
+│       ├── PriceUtils.java         # Format tiền tệ (VND), tính toán tổng tiền
+│       ├── RoleUtils.java          # Kiểm tra quyền hạn User
+│       └── ValidationUtils.java    # Kiểm tra form (email, pass, phone hợp lệ)
 │
-├── data
-│   ├── model             // 1 TABLE = 1 MODEL
-│   │   ├── User.java
-│   │   ├── Role.java
-│   │   ├── Category.java
-│   │   ├── MenuItem.java
-│   │   ├── DiningTable.java
-│   │   ├── Reservation.java
-│   │   ├── Order.java
-│   │   ├── OrderDetail.java
-│   │   ├── ItemRating.java
-│   │   ├── Notification.java
-│   │   ├── NotificationType.java
-│   │   ├── Payment.java
+├── data/                           # TẦNG DỮ LIỆU (Data Layer - Room Database)
+│   ├── model/                      # Thực thể (Entities) - Ánh xạ 1:1 với bảng CSDL
+│   │   ├── User.java               # Bảng người dùng
+│   │   ├── ... (Các model khác tương ứng với bảng DB)
 │   │   └── PaymentMethod.java
 │   │
-│   ├── database
-│   │   ├── AppDatabase.java
-│   │   ├── UserDao.java
-│   │   ├── RoleDao.java
-│   │   ├── CategoryDao.java
-│   │   ├── MenuItemDao.java
-│   │   ├── DiningTableDao.java
-│   │   ├── ReservationDao.java
-│   │   ├── OrderDao.java
-│   │   ├── OrderDetailDao.java
-│   │   ├── ItemRatingDao.java
-│   │   ├── NotificationDao.java
-│   │   ├── PaymentDao.java
+│   ├── database/                   # Cấu hình Database
+│   │   ├── AppDatabase.java        # Class khởi tạo Room DB, migrate version
+│   │   ├── UserDao.java            # DAO: Các câu lệnh truy vấn SQL cho bảng User
+│   │   ├── ... (Các DAO khác)
 │   │   └── PaymentMethodDao.java
 │   │
-│   └── repository
-│       ├── AuthRepository.java
-│       ├── MenuRepository.java
-│       ├── OrderRepository.java
-│       ├── ReservationRepository.java
-│       ├── PaymentRepository.java
+│   └── repository/                 # Kho chứa dữ liệu (Repository Pattern)
+│       ├── AuthRepository.java     # Xử lý logic đăng nhập/đăng ký, gọi xuống DAO
+│       ├── ... (Các Repo khác)
 │       └── NotificationRepository.java
 │
-├── ui
-│   ├── auth
-│   │   ├── LoginActivity.java
-│   │   └── RegisterActivity.java
+├── ui/                             # TẦNG GIAO DIỆN (Presentation Layer)
+│   ├── auth/                       # Màn hình xác thực
+│   │   ├── LoginActivity.java      # Màn hình Đăng nhập
+│   │   └── RegisterActivity.java   # Màn hình Đăng ký
 │   │
-│   ├── customer
-│   │   ├── home
-│   │   │   └── CustomerHomeActivity.java
-│   │   │
-│   │   ├── menu
-│   │   │   ├── MenuFragment.java
-│   │   │   └── MenuAdapter.java
-│   │   │
-│   │   ├── cart
-│   │   │   ├── CartFragment.java
-│   │   │   └── CartAdapter.java
-│   │   │
-│   │   ├── order
-│   │   │   ├── OrderHistoryFragment.java
-│   │   │   └── OrderHistoryAdapter.java
-│   │   │
-│   │   └── reservation
-│   │   │       └── ReservationFragment.java
+│   ├── customer/                   # GIAO DIỆN KHÁCH HÀNG
+│   │   ├── home/                   # Trang chủ khách hàng
+│   │   ├── menu/                   # Xem danh sách món ăn, tìm kiếm
+│   │   ├── cart/                   # Giỏ hàng, xác nhận đặt món
+│   │   ├── order/                  # Lịch sử đơn hàng đã đặt
+│   │   └── reservation/            # Màn hình đặt bàn trước
 │   │
-│   ├── staff
-│   │   ├── home
-│   │   │   └── StaffHomeActivity.java
-│   │   │
-│   │   ├── order
-│   │   │   ├── OrderManageFragment.java
-│   │   │   └── OrderManageAdapter.java
-│   │   │
-│   │   └── table
-│   │       └── TableStatusFragment.java
+│   ├── staff/                      # GIAO DIỆN NHÂN VIÊN
+│   │   ├── home/                   # Dashboard cho nhân viên
+│   │   ├── order/                  # Quản lý đơn hàng (Tiếp nhận/Từ chối/Hoàn thành)
+│   │   └── table/                  # Sơ đồ bàn, cập nhật trạng thái bàn (Trống/Có khách)
 │   │
-│   └── owner
-│       ├── home
-│       │   └── OwnerHomeActivity.java
-│       │
-│       ├── menu
-│       │   ├── ManageMenuFragment.java
-│       │   └── EditMenuItemActivity.java
-│       │
-│       ├── staff
-│       │   └── StaffManageFragment.java
-│       │
-│       └── report
-│           └── RevenueFragment.java
+│   └── owner/                      # GIAO DIỆN QUẢN LÝ (CHỦ QUÁN)
+│       ├── home/                   # Dashboard tổng quan
+│       ├── menu/                   # Quản lý thực đơn (Thêm/Sửa/Xóa món)
+│       ├── staff/                  # Quản lý nhân viên
+│       └── report/                 # Báo cáo doanh thu, thống kê
 │
-└── MyApplication.java
+└── MyApplication.java              # Application Class (Khởi tạo DB, Context toàn cục)
