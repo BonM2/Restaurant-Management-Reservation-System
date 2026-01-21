@@ -1,3 +1,4 @@
+```text
 com.example.restaurant
 │
 ├── core/                           # CÁC THÀNH PHẦN DÙNG CHUNG (Core Layer)
