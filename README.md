@@ -1,3 +1,6 @@
+## Project Structure
+
+```text
 com.example.restaurant
 │
 ├── core
@@ -6,7 +9,7 @@ com.example.restaurant
 │   │   └── BaseFragment.java
 │   │
 │   ├── session
-│   │   └── SessionManager.java      // lưu user, role, login state
+│   │   └── SessionManager.java       // lưu user, role, login state
 │   │
 │   └── utils
 │       ├── Constants.java
@@ -16,7 +19,7 @@ com.example.restaurant
 │       └── ValidationUtils.java
 │
 ├── data
-│   ├── model            // 1 TABLE = 1 MODEL
+│   ├── model             // 1 TABLE = 1 MODEL
 │   │   ├── User.java
 │   │   ├── Role.java
 │   │   ├── Category.java
@@ -76,7 +79,7 @@ com.example.restaurant
 │   │   │   └── OrderHistoryAdapter.java
 │   │   │
 │   │   └── reservation
-│   │       └── ReservationFragment.java
+│   │   │       └── ReservationFragment.java
 │   │
 │   ├── staff
 │   │   ├── home
