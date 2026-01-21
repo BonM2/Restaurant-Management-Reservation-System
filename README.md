@@ -1,24 +1,106 @@
-
-This version clearly separates the features by user roles, which is excellent for showing your understanding of system design.
-
-Project Name: Restaurant Management & Reservation System
-
-Overview This project is a comprehensive software solution designed to streamline restaurant operations and enhance the dining experience for customers. The system features a dual-interface architecture catering to both restaurant administrators and clients.
-
-Key Features
-
-1. Administrator Module (For Owners/Managers):
-
-    Menu & Inventory Management: efficiently manage food and beverage items, track stock levels, and update pricing in real-time.
-
-    Staff Administration: Maintain staff records, manage shifts, and assign specific roles and permissions.
-
-    Order Processing: Monitor incoming orders and table status to ensure smooth workflow.
-
-2. Customer Module:
-
-    User Authentication: Secure login and registration system for customers to manage their profiles.
-
-    Smart Table Reservation: Allows customers to view available time slots and book tables in advance.
-
-    Menu Browsing: Customers can browse the digital menu before arriving or while booking.
+com.example.restaurant
+│
+├── core
+│   ├── base
+│   │   ├── BaseActivity.java
+│   │   └── BaseFragment.java
+│   │
+│   ├── session
+│   │   └── SessionManager.java      // lưu user, role, login state
+│   │
+│   └── utils
+│       ├── Constants.java
+│       ├── DateUtils.java
+│       ├── PriceUtils.java
+│       ├── RoleUtils.java
+│       └── ValidationUtils.java
+│
+├── data
+│   ├── model            // 1 TABLE = 1 MODEL
+│   │   ├── User.java
+│   │   ├── Role.java
+│   │   ├── Category.java
+│   │   ├── MenuItem.java
+│   │   ├── DiningTable.java
+│   │   ├── Reservation.java
+│   │   ├── Order.java
+│   │   ├── OrderDetail.java
+│   │   ├── ItemRating.java
+│   │   ├── Notification.java
+│   │   ├── NotificationType.java
+│   │   ├── Payment.java
+│   │   └── PaymentMethod.java
+│   │
+│   ├── database
+│   │   ├── AppDatabase.java
+│   │   ├── UserDao.java
+│   │   ├── RoleDao.java
+│   │   ├── CategoryDao.java
+│   │   ├── MenuItemDao.java
+│   │   ├── DiningTableDao.java
+│   │   ├── ReservationDao.java
+│   │   ├── OrderDao.java
+│   │   ├── OrderDetailDao.java
+│   │   ├── ItemRatingDao.java
+│   │   ├── NotificationDao.java
+│   │   ├── PaymentDao.java
+│   │   └── PaymentMethodDao.java
+│   │
+│   └── repository
+│       ├── AuthRepository.java
+│       ├── MenuRepository.java
+│       ├── OrderRepository.java
+│       ├── ReservationRepository.java
+│       ├── PaymentRepository.java
+│       └── NotificationRepository.java
+│
+├── ui
+│   ├── auth
+│   │   ├── LoginActivity.java
+│   │   └── RegisterActivity.java
+│   │
+│   ├── customer
+│   │   ├── home
+│   │   │   └── CustomerHomeActivity.java
+│   │   │
+│   │   ├── menu
+│   │   │   ├── MenuFragment.java
+│   │   │   └── MenuAdapter.java
+│   │   │
+│   │   ├── cart
+│   │   │   ├── CartFragment.java
+│   │   │   └── CartAdapter.java
+│   │   │
+│   │   ├── order
+│   │   │   ├── OrderHistoryFragment.java
+│   │   │   └── OrderHistoryAdapter.java
+│   │   │
+│   │   └── reservation
+│   │       └── ReservationFragment.java
+│   │
+│   ├── staff
+│   │   ├── home
+│   │   │   └── StaffHomeActivity.java
+│   │   │
+│   │   ├── order
+│   │   │   ├── OrderManageFragment.java
+│   │   │   └── OrderManageAdapter.java
+│   │   │
+│   │   └── table
+│   │       └── TableStatusFragment.java
+│   │
+│   └── owner
+│       ├── home
+│       │   └── OwnerHomeActivity.java
+│       │
+│       ├── menu
+│       │   ├── ManageMenuFragment.java
+│       │   └── EditMenuItemActivity.java
+│       │
+│       ├── staff
+│       │   └── StaffManageFragment.java
+│       │
+│       └── report
+│           └── RevenueFragment.java
+│
+└── MyApplication.java
