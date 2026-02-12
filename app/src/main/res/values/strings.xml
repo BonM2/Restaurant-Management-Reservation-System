@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Restaurant</string>
+    <string name="login_txt">Đăng nhập</string>
+    <string name="register_txt">Đăng ký</string>
+    <string name="login_edit_text_hint">Nhập email hoặc số điện thoại</string>
+    <string name="password_edit_text_hint">Nhập mật khẩu</string>
+    <string name="forget_password_txt"><u>Quên mật khẩu?</u></string>
+</resources>
