@@ -1,24 +1,36 @@
-
-This version clearly separates the features by user roles, which is excellent for showing your understanding of system design.
-
-Project Name: Restaurant Management & Reservation System
-
-Overview This project is a comprehensive software solution designed to streamline restaurant operations and enhance the dining experience for customers. The system features a dual-interface architecture catering to both restaurant administrators and clients.
-
-Key Features
-
-1. Administrator Module (For Owners/Managers):
-
-    Menu & Inventory Management: efficiently manage food and beverage items, track stock levels, and update pricing in real-time.
-
-    Staff Administration: Maintain staff records, manage shifts, and assign specific roles and permissions.
-
-    Order Processing: Monitor incoming orders and table status to ensure smooth workflow.
-
-2. Customer Module:
-
-    User Authentication: Secure login and registration system for customers to manage their profiles.
-
-    Smart Table Reservation: Allows customers to view available time slots and book tables in advance.
-
-    Menu Browsing: Customers can browse the digital menu before arriving or while booking.
+```text
+app/src/main/java/com/example/restaurant/
+├── 📁 core/                        # Các thành phần cốt lõi dùng chung
+│   ├── 📁 base/                    # Base classes (BaseActivity, BaseFragment)
+│   ├── 📁 session/                 # Quản lý phiên làm việc (SessionManager)
+│   └── 📁 utils/                   # Các lớp tiện ích (Constants, Date, Price, Validation...)
+│
+├── 📁 data/                        # Tầng dữ liệu của ứng dụng
+│   └── 📁 database/                # Room Database & Data Access Objects (DAOs)
+│       ├── AppDatabase.java        # Cấu hình chính cho Room Database
+│       └── 📄 (13 DAOs: Category, Order, User, Reservation...)
+│
+├── 📁 model/                       # Các thực thể dữ liệu (Entities)
+│   └── 📄 (13 Models: MenuItem, DiningTable, Payment, Role...)
+│
+├── 📁 repository/                  # Tầng trung gian (Repository Pattern)
+│   └── 📄 (6 Repositories: Auth, Menu, Order, Reservation...)
+│
+└── 📁 ui/                          # Tầng giao diện người dùng (UI)
+    ├── 📁 auth/                    # Chức năng Đăng nhập & Đăng ký
+    ├── 📁 customer/                # Luồng chức năng cho Khách hàng
+    │   ├── 📁 cart/                # Giỏ hàng & Adapter
+    │   ├── 📁 home/                # Trang chủ khách hàng
+    │   ├── 📁 menu/                # Danh sách thực đơn
+    │   ├── 📁 order/               # Lịch sử đơn hàng
+    │   └── 📁 reservation/         # Đặt bàn
+    ├── 📁 owner/                   # Luồng chức năng cho Chủ nhà hàng
+    │   ├── 📁 home/                # Dashboard quản lý
+    │   ├── 📁 menu/                # Chỉnh sửa & Quản lý thực đơn
+    │   ├── 📁 report/              # Báo cáo & Thống kê doanh thu
+    │   └── 📁 staff/               # Quản lý nhân viên
+    └── 📁 staff/                   # Luồng chức năng cho Nhân viên
+        ├── 📁 home/                # Trang chủ nhân viên
+        ├── 📁 order/               # Quản lý đơn hàng đang xử lý
+        └── 📁 table/               # Theo dõi trạng thái bàn (Table Status)
+```
