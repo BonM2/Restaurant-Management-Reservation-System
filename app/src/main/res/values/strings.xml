@@ -7,6 +7,7 @@
     <string name="full_name_edit_text_hint">Họ và Tên</string>
     <string name="phone_number_edit_text_hint">Số điện thoại</string>
     <string name="email_edit_text_hint">Email</string>
+    <string name="has_account_text">Đã có tài khoản?</string>
     <string name="password_authentication_edit_text_hint">Nhập lại mật khẩu</string>
     <string name="forget_password_txt"><u>Quên mật khẩu?</u></string>
 </resources>
