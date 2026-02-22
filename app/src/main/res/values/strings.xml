@@ -9,5 +9,12 @@
     <string name="email_edit_text_hint">Email</string>
     <string name="has_account_text">Đã có tài khoản?</string>
     <string name="password_authentication_edit_text_hint">Nhập lại mật khẩu</string>
+    <string name="user_information_txt">Thông tin người dùng</string>
+    <string name="user_fullName">Nguyễn Văn A</string>
+    <string name="account_phoneNumber_digits">0123456789</string>
+    <string name="account_mail">nguyenvana@gmail.com</string>
+    <string name="account_gender">Nam</string>
+    <string name="account_birthday">01/01/2000</string>
+    <string name="account_signal_levels">Đang hoạt động</string>
     <string name="forget_password_txt"><u>Quên mật khẩu?</u></string>
 </resources>
