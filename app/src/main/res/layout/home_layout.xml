@@ -4,78 +4,95 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_color">
+    android:background="#FFFCF2">
 
     <View
         android:id="@+id/header_background"
-        android:layout_width="0dp"
-        android:layout_height="110dp"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
         android:background="#9A4242"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/search_view"
         android:layout_width="0dp"
-        android:layout_height="39dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:background="@drawable/search_background"
-        android:layout_marginTop="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
         app:iconifiedByDefault="false"
-        app:queryHint="Tìm kiếm..."
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/header_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:queryHint="Tìm kiếm..." />
 
-    <android.widget.TextView
+    <TextView
         android:id="@+id/HotItem"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:fontFamily="@font/montserrat_black_italic"
-        android:text="Các Món Ăn Bán Chạy "
+        android:text="Các Món Ăn Bán Chạy"
+        android:textColor="@color/black"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/header_background"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@id/header_background" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/List_itemSignature"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/HotItem"
-        android:layout_marginTop="0dp"
         tools:listitem="@layout/item_signature_vc" />
 
-    <android.widget.TextView
+    <TextView
         android:id="@+id/Menu"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:fontFamily="sans-serif-black"
         android:text="MENU"
         android:textAlignment="center"
+        android:textColor="@color/black"
         android:textSize="28sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/List_itemSignature"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@id/List_itemSignature" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/List_itemMenu"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-
-        android:paddingLeft="23dp"
+        android:paddingStart="23dp"
+        android:paddingEnd="23dp"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:spanCount="2"
-        tools:listitem="@layout/item_viewcard"
-
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/Menu"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:spanCount="2"
+        tools:listitem="@layout/item_viewcard" />
 
-        />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#9A4242"
+        app:itemActiveIndicatorStyle="@null"
+        app:itemIconTint="@color/nav_item_color"
+        app:itemTextColor="@color/nav_item_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
