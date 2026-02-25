@@ -5,10 +5,8 @@
     android:layout_height="match_parent"
     android:background="#FFFCF2">
 
-    <!--Login Page-->
-
     <TextView
-        android:id="@+id/loginTxt"
+        android:id="@+id/activityLoginTv"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -23,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/loginEditText"
+        android:id="@+id/activityLoginEtPhoneNumber"
         android:layout_width="0dp"
         android:textColor="@color/black"
         android:layout_height="wrap_content"
@@ -34,12 +32,12 @@
         android:hint="@string/login_edit_text_hint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginTxt">
+        app:layout_constraintTop_toBottomOf="@+id/activityLoginTv">
 
     </com.google.android.material.textfield.TextInputEditText>
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/loginPasswordEditText"
+        android:id="@+id/activityLoginEtPassword"
         android:layout_width="0dp"
         android:textColor="@color/black"
         android:layout_height="wrap_content"
@@ -50,12 +48,12 @@
         android:hint="@string/password_edit_text_hint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginEditText">
+        app:layout_constraintTop_toBottomOf="@+id/activityLoginEtPhoneNumber">
 
     </com.google.android.material.textfield.TextInputEditText>
 
     <TextView
-        android:id="@+id/forgetPasswordTxt"
+        android:id="@+id/activityLoginTvForgetPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
@@ -64,10 +62,10 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginPasswordEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/activityLoginEtPassword" />
 
     <Button
-        android:id="@+id/loginButton"
+        android:id="@+id/activityLoginBtnLogin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
@@ -76,7 +74,7 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/forgetPasswordTxt" />
+        app:layout_constraintTop_toBottomOf="@+id/activityLoginTvForgetPassword" />
 
     <TextView
         android:id="@+id/textView"
@@ -91,10 +89,10 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
+        app:layout_constraintTop_toBottomOf="@+id/activityLoginBtnLogin" />
 
     <Button
-        android:id="@+id/registerButton"
+        android:id="@+id/activityLoginBtnRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
