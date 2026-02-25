@@ -7,7 +7,7 @@
     android:background="#FFFCF2">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/fragmentUserProfileTb"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="#9A4242"
@@ -30,22 +30,23 @@
     </androidx.appcompat.widget.Toolbar>
 
     <FrameLayout
-        android:id="@+id/profile_image_container"
+        android:id="@+id/fragmentUserProfileFlAvatarContainer"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar">
+        app:layout_constraintTop_toBottomOf="@id/fragmentUserProfileTb">
 
         <ImageView
-            android:id="@+id/img_avatar"
+            android:id="@+id/fragmentUserProfileIvAvatar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_user_placeholder" />
 
         <ImageView
+            android:id="@+id/fragmentUserProfileIvEdit"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_gravity="bottom|end"
@@ -53,17 +54,17 @@
     </FrameLayout>
 
     <LinearLayout
-        android:id="@+id/info_container"
+        android:id="@+id/fragmentUserProfileLlInformationContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/profile_image_container">
+        app:layout_constraintTop_toBottomOf="@id/fragmentUserProfileFlAvatarContainer">
 
         <LinearLayout
-            android:id="@+id/item_username"
+            android:id="@+id/fragmentUserProfileLlUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
@@ -85,6 +86,7 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:id="@+id/fragmentUserProfileTvUsername"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/user_fullName"
@@ -92,6 +94,7 @@
                 android:textSize="16sp" />
 
             <ImageView
+                android:id="@+id/fragmentUserProfileIvUsernameArrow"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:layout_marginStart="8dp"
@@ -104,7 +107,7 @@
             android:background="@color/black" />
 
         <LinearLayout
-            android:id="@+id/item_signal"
+            android:id="@+id/fragmentUserProfileLlSignal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -126,6 +129,7 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:id="@+id/fragmentUserProfileTvSignal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/account_signal_levels"
@@ -139,7 +143,7 @@
             android:background="@color/black" />
 
         <LinearLayout
-            android:id="@+id/item_phoneNumber"
+            android:id="@+id/fragmentUserProfileLlPhoneNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
@@ -163,6 +167,7 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:id="@+id/fragmentUserProfileTvPhoneNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/account_phoneNumber_digits"
@@ -176,7 +181,7 @@
             android:background="@color/black" />
 
         <LinearLayout
-            android:id="@+id/item_mail"
+            android:id="@+id/fragmentUserProfileLlEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
@@ -200,6 +205,7 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:id="@+id/fragmentUserProfileTvEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/account_mail"
@@ -207,6 +213,7 @@
                 android:textSize="16sp" />
 
             <ImageView
+                android:id="@+id/fragmentUserProfileIvEmailArrow"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:layout_marginStart="8dp"
@@ -219,7 +226,7 @@
             android:background="@color/black" />
 
         <LinearLayout
-            android:id="@+id/item_sex"
+            android:id="@+id/fragmentUserProfileLlSex"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
@@ -243,6 +250,7 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:id="@+id/fragmentUserProfileTvSex"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/account_gender"
@@ -250,6 +258,7 @@
                 android:textSize="16sp" />
 
             <ImageView
+                android:id="@+id/fragmentUserProfileIvSexArrow"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:layout_marginStart="8dp"
@@ -262,7 +271,7 @@
             android:background="@color/black" />
 
         <LinearLayout
-            android:id="@+id/item_birthday"
+            android:id="@+id/fragmentUserProfileLlBirthday"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
@@ -286,6 +295,7 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:id="@+id/fragmentUserProfileTvBirthday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/account_birthday"
@@ -293,6 +303,7 @@
                 android:textSize="16sp" />
 
             <ImageView
+                android:id="@+id/fragmentUserProfileIvBirthdayArrow"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:layout_marginStart="8dp"
@@ -303,12 +314,10 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/black" />
-
     </LinearLayout>
 
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
+        android:id="@+id/fragmentUserProfileBnvMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#9A4242"
