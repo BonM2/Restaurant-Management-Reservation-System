@@ -82,7 +82,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_edit_text"
-            android:hint="@string/register_hint_password"
+            android:hint="@string/common_hint_password"
             android:inputType="textPassword"
             android:textColor="@color/black" />
 
