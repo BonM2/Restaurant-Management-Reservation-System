@@ -1,9 +1,16 @@
 <resources>
     <string name="app_name">Restaurant</string>
+    <string name="login_hint_phone_number">Nhập số điện thoại</string>
+    <string name="user_profile_information">Thông tin người dùng</string>
+    <string name="user_profile_full_name">Nguyễn Văn A</string>
+    <string name="user_profile_phone_number">0123456789</string>
+    <string name="user_profile_email">nguyenvana@gmail.com</string>
+    <string name="user_profile_sex">Nam</string>
+    <string name="user_profile_birthday">01/01/2000</string>
+    <string name="user_profile_signal">Đang hoạt động</string>
     <string name="common_login"><b>Đăng nhập</b></string>
     <string name="common_register"><b>Đăng ký</b></string>
-    <string name="login_edit_text_hint">Nhập email hoặc số điện thoại</string>
-    <string name="register_hint_password">Nhập mật khẩu</string>
+    <string name="common_hint_password">Nhập mật khẩu</string>
     <string name="register_hint_full_name">Họ và Tên</string>
     <string name="register_hint_phone_number">Số điện thoại</string>
     <string name="register_hint_email">Email</string>
