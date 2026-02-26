@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/user_information_txt"
+            android:text="@string/user_profile_information"
             android:textColor="#FFFFFF"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -132,7 +132,7 @@
                 android:id="@+id/fragmentUserProfileTvSignal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/account_signal_levels"
+                android:text="@string/user_profile_signal"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
         </LinearLayout>
@@ -170,7 +170,7 @@
                 android:id="@+id/fragmentUserProfileTvPhoneNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/account_phoneNumber_digits"
+                android:text="@string/user_profile_phone_number"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
         </LinearLayout>
@@ -208,7 +208,7 @@
                 android:id="@+id/fragmentUserProfileTvEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/account_mail"
+                android:text="@string/user_profile_email"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -253,7 +253,7 @@
                 android:id="@+id/fragmentUserProfileTvSex"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/account_gender"
+                android:text="@string/user_profile_sex"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -298,7 +298,7 @@
                 android:id="@+id/fragmentUserProfileTvBirthday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/account_birthday"
+                android:text="@string/user_profile_birthday"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
