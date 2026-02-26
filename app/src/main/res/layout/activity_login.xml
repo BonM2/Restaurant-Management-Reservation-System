@@ -23,34 +23,45 @@
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/activityLoginEtPhoneNumber"
         android:layout_width="0dp"
-        android:textColor="@color/black"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="50dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/rounded_edit_text"
         android:hint="@string/login_hint_phone_number"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/activityLoginTv">
 
     </com.google.android.material.textfield.TextInputEditText>
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/activityLoginEtPassword"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/activityLoginTilPassword"
         android:layout_width="0dp"
-        android:textColor="@color/black"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/rounded_edit_text"
-        android:hint="@string/common_hint_password"
+        android:layout_marginTop="20dp"
+        android:textColorHint="#A0A0A0"
+        app:endIconDrawable="@drawable/ic_visibility"
+        app:endIconMode="password_toggle"
+        app:hintEnabled="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/activityLoginEtPhoneNumber">
 
-    </com.google.android.material.textfield.TextInputEditText>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/activityLoginEtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rounded_edit_text"
+            android:hint="@string/common_hint_password"
+            android:inputType="textPassword"
+            android:textColor="@color/black">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/activityLoginTvForgetPassword"
@@ -62,7 +73,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/activityLoginEtPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/activityLoginTilPassword" />
 
     <Button
         android:id="@+id/activityLoginBtnLogin"
