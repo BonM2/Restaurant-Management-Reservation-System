@@ -31,4 +31,15 @@
     <string name="payment_history_position_label">Vị trí : </string>
     <string name="payment_history_time_label">Thời gian : </string>
     <string name="payment_history_map_desc">Restaurant Map</string>
+    <string name="payment_history_sample_order_id">191225-1492874983</string>
+    <string name="payment_history_sample_date">19/12/2025</string>
+    <string name="payment_history_sample_position">BÀN SỐ 4 - 4 Khách</string>
+    <string name="payment_history_sample_time">19:30</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Trang chủ</string>
+    <string name="nav_map">Gần bạn</string>
+    <string name="nav_order">Đặt hàng</string>
+    <string name="nav_notifications">Thông báo</string>
+    <string name="nav_profile">Hồ sơ</string>
 </resources>
