@@ -17,4 +17,11 @@
     <string name="account_birthday">01/01/2000</string>
     <string name="account_signal_levels">Đang hoạt động</string>
     <string name="forget_password_txt"><u>Quên mật khẩu?</u></string>
+
+    <!-- Home Screen -->
+    <string name="home_search_hint">Tìm kiếm...</string>
+    <string name="home_menu_title">MENU</string>
+    <string name="home_cart_icon_desc">Cart Icon</string>
+    <string name="home_cart_quantity_default">12</string>
+    <string name="home_view_order_button">Xem đơn hàng - 50.000đ</string>
 </resources>
