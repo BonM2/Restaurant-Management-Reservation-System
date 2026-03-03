@@ -19,9 +19,16 @@
     <string name="forget_password_txt"><u>Quên mật khẩu?</u></string>
 
     <!-- Home Screen -->
-    <string name="home_search_hint">Tìm kiếm...</string>
+    <string name="home_search_hint">Tìm kiếm…</string>
     <string name="home_menu_title">MENU</string>
     <string name="home_cart_icon_desc">Cart Icon</string>
     <string name="home_cart_quantity_default">12</string>
     <string name="home_view_order_button">Xem đơn hàng - 50.000đ</string>
+
+    <!-- Payment History Screen -->
+    <string name="payment_history_title">Lịch sử thanh toán</string>
+    <string name="payment_history_order_id_prefix">Mã đơn #</string>
+    <string name="payment_history_position_label">Vị trí : </string>
+    <string name="payment_history_time_label">Thời gian : </string>
+    <string name="payment_history_map_desc">Restaurant Map</string>
 </resources>
