@@ -28,7 +28,7 @@
         android:layout_marginTop="50dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/rounded_edit_text"
-        android:hint="@string/login_hint_phone_number"
+        android:hint="@string/common_hint_phone_number"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
